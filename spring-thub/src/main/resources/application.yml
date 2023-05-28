@@ -1,0 +1,32 @@
+
+server:
+  port: 8081
+knife4j:
+  # 是否开启增强模式
+  enable: true
+
+spring:
+  application:
+    name: thub
+  mvc:
+    pathmatch:
+      # Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      # 所以需要配置此参数
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.200.204.47:3306/thub?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: czhroot
+
+
+
+
+sa-token:
+  token-name: satoken
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: true
+  token-style: uuid
+  is-log: false

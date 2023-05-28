@@ -1,0 +1,47 @@
+/* pages/test/test.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-color: #F4F4F4;
+}
+.tj{
+  background-color: #FFF;
+  font-weight: 200;
+  color: #939393;
+}
+.statistics-left{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10rpx;
+}
+
+.statistics-right{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10rpx;
+}
+.bnt{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 5% 0;
+}
+.bnt01{
+  background: #4CDEBA;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  color: #FFF;
+  font-weight: 800;
+}
+.t-button--circle.t-button--size-large {
+  width: 150rpx !important;
+  height: 150rpx;
+}

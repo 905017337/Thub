@@ -1,0 +1,41 @@
+/* pages/me/me.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  font-size: 14px;
+}
+.top{
+  height: 25%;
+  background: -webkit-linear-gradient(top,#0052d9,#FFFFFF, white);
+}
+
+.bottom{
+  height: 75%;
+}
+.tr {
+  display: flex;
+}
+
+.col-image { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 10%;
+}
+.col-nick { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 5%;
+}
+.tr + .tr {
+  margin-top: 48rpx;
+}
+
+.text {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, .6);
+  line-height: 44rpx;
+  margin-bottom: 32rpx;
+}

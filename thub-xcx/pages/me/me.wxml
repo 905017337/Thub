@@ -1,0 +1,34 @@
+<!-- 头像和昵称 -->
+  <view class="top"> 
+    <view class="col-image">
+    <t-image src="{{imageSrc}}" width="72" height="72" shape="circle" aria-label="一个放置在墙角的黄色行李箱" />
+  </view>
+  <view class="col-nick">
+      小明的小伙伴
+    </view>
+  </view>
+  <!-- 灰色隔离带 -->
+  <view class="hse" />
+<!-- cell -->
+  <view class="bottom">
+    <t-cell title="我的积分" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+    <t-cell title="考试记录" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+    <t-cell title="练习设置" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+    <t-cell title="在线签到" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+    <!-- 灰色隔离带 -->
+    <view class="hse" />
+    <t-cell title="分享好友" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+    <t-cell title="意见反馈" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+  </view>
+    <!-- tabbar -->
+    <t-tab-bar value="{{value}}" bindchange="TabbarOnChange" shape="round" theme="tag" split="{{false}}">
+  <t-tab-bar-item
+    wx:for="{{list}}"
+    wx:key="index"
+    value="{{item.value}}"
+    icon="{{item.icon}}"
+    ariaLabel="{{item.ariaLabel}}"
+  >
+    {{item.ariaLabel}}
+  </t-tab-bar-item>
+</t-tab-bar>

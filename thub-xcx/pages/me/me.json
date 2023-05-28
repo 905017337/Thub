@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-cell": "tdesign-miniprogram/cell/cell"
+  },
+  "navigationBarTitleText":"个人中心",
+  "navigationBarBackgroundColor":"#0052d9"
+}

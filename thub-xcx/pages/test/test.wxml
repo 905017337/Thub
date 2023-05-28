@@ -1,0 +1,53 @@
+<view>
+  <!-- 统计 -->
+  <view class="tj">
+    <t-row gutter="16">
+      <t-col span="12" t-class="dark">
+        <view class="statistics-left">
+          使用天数：20 天
+        </view>
+      </t-col>
+      <t-col span="12" t-class="light">
+        <view class="statistics-right">
+          刷题正确率： 80%
+        </view>
+      </t-col>
+    </t-row>
+    <!-- 灰色隔离带 -->
+<view class="hse" />
+<!-- 随机刷题 -->
+    <view class="bnt">
+      <view class="bnt01">
+        随机刷机
+      </view>
+<!-- 模拟考试 -->
+    </view>
+    <view class="bnt">
+      <view class="bnt01">
+        模拟考试
+      </view>
+    </view>
+  </view>
+<!-- 灰色隔离带 -->
+<view class="hse" />
+<!-- 快捷入口 -->
+  <t-grid class="block" column="{{4}}">
+  <t-grid-item text="专项刷题" image="/images/jiaoxueziyuanpingtai.png" />
+  <t-grid-item text="题型刷题" image="/images/lunwenfabiaoshuliang.png" />
+  <t-grid-item text="乱序刷题" image="/images/suanfaku.png" />
+  <t-grid-item text="我的收藏" image="/images/wodebaogao.png" />
+</t-grid>
+<t-grid class="block" column="{{4}}">
+  <t-grid-item text="我的错题" image="/images/zhihuikaoshi.png" />
+  <t-grid-item text="未作习题" image="/images/zhihuitiku.png" />
+  <t-grid-item text="刷知识点" image="/images/zhizhishu.png" />
+  <t-grid-item text="自我评测" image="/images/zhuanyekechengfazhanzhongxin.png" />
+</t-grid>
+
+  <!-- tabbar -->
+  <t-tab-bar value="{{value}}" bindchange="TabbarOnChange" shape="round" theme="tag" split="{{false}}">
+    <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+      {{item.ariaLabel}}
+    </t-tab-bar-item>
+  </t-tab-bar>
+</view>

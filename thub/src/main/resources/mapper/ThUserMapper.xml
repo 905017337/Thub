@@ -1,0 +1,4 @@
+controller.java.ftl
+mapper.java.ftl
+service.java.ftl
+serviceImpl.java.ftl

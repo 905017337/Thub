@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!-- 通知栏 -->
+<t-notice-bar visible="{{visible}}" suffixIcon="chevron-right" bind:click="click">
+  <view slot="content" class="inline"> XXX考试倒计时：20天 </view>
+  <t-link slot="operation" content="详情" theme="primary" underline="{{false}}" navigator-props="{{navigatorProps}}" />
+</t-notice-bar>
+
+<!-- 轮播图 -->
+<t-swiper
+  current="{{current}}"
+  autoplay="{{autoplay}}"
+  duration="{{duration}}"
+  interval="{{interval}}"
+  navigation="{{ { type: 'dots' } }}"
+  list="{{swiperList}}"
+  bind:click="onTap"
+  bind:change="swiperOnChange"
+  bind:image-load="onImageLoad"
+>
+</t-swiper>
+<!-- 灰色隔离带 -->
+<view class="hse" />
+<!-- 宫格 -->
+<t-grid class="block" column="{{4}}" >
+  <t-grid-item text="建筑工程" image="/images/zhihuikaoshi.png" />
+  <t-grid-item text="会计财税" image="/images/zhihuitiku.png" />
+  <t-grid-item text="职业资格" image="/images/zhizhishu.png" />
+  <t-grid-item text="技能鉴定" image="/images/zhuanyekechengfazhanzhongxin.png" />
+</t-grid>
+<!-- 灰色隔离带 -->
+<view class="hse" />
+<!-- 我的题库 -->
+<view class="wdtk">
+<view class="title">
+我的题库
+</view>
+<view>
+  <t-empty t-class="empty-cls" t-class-image="t-empty__image" image="{{eyptyImage}}" description="暂无题库，去题库分配查找题库" />
+</view>
+</view>
+
+<!-- tabbar -->
+  <t-tab-bar value="{{value}}" bindchange="TabbarOnChange" shape="round" theme="tag" split="{{false}}">
+  <t-tab-bar-item
+    wx:for="{{list}}"
+    wx:key="index"
+    value="{{item.value}}"
+    icon="{{item.icon}}"
+    ariaLabel="{{item.ariaLabel}}"
+  >
+    {{item.ariaLabel}}
+  </t-tab-bar-item>
+</t-tab-bar>

@@ -1,0 +1,25 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  width: 100%;
+  font-size: 12rpx;
+}
+.inline {
+  display: inline;
+}
+
+.block{
+  margin: 5px 0;
+}
+.wdtk{
+  background-color: #FFFFFF;
+  font-size:14px
+}
+.wdtk .title{
+  padding-left: 3px;
+}
+.t-empty__image {
+  padding-top:50%;
+  width: 240rpx !important;
+  height: 240rpx !important;
+}

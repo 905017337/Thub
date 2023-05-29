@@ -1,10 +1,10 @@
 // app.js
 App({
   onLaunch() {
-    var that=this;
+    var that = this;
     // 获取屏幕高度
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         that.globalData.windowHeight = res.windowHeight
       }
     })
@@ -17,6 +17,14 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        //发起网络请求
+        console.log(res.code)
+        // wx.request({
+        //   url: 'http://localhost:80801/',
+        //   data: {
+        //     code: res.code
+        //   }
+        // })
       }
     })
   },

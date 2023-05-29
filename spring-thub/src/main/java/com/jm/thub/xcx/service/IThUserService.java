@@ -2,7 +2,7 @@ package com.jm.thub.xcx.service;
 
 import com.jm.thub.core.service.AbstractService;
 import com.jm.thub.core.util.result.Result;
-import com.jm.thub.xcx.entity.WxUserInfo;
+import com.jm.thub.xcx.entity.ThWxUser;
 
 /**
 * <p>
@@ -12,7 +12,7 @@ import com.jm.thub.xcx.entity.WxUserInfo;
 * @author caozhenhao
 * @since 2023-05-28
 */
-public interface IThUserService extends AbstractService<WxUserInfo>{
+public interface IThUserService extends AbstractService<ThWxUser>{
 
     /**
      * 登录
@@ -26,6 +26,6 @@ public interface IThUserService extends AbstractService<WxUserInfo>{
      * @param userInfo  包含一些加密的信息
      * @return  WxMaUserInfo
      */
-    Result getUserInfo(WxUserInfo userInfo);
+    Result getUserInfo(ThWxUser userInfo);
 
 }

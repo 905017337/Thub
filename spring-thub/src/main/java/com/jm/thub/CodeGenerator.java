@@ -23,7 +23,7 @@ public class CodeGenerator {
     private String serviceImplTemplate = templatePath + "serviceImpl.java";
     private String mapperTemplate = templatePath + "mapper.java";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         CodeGenerator codeGenerator = new CodeGenerator();
         codeGenerator.execute();
     }
@@ -102,7 +102,7 @@ public class CodeGenerator {
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
         //数据库-表名
-        strategy.setInclude("th_user");
+        strategy.setInclude("th_wx_user");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

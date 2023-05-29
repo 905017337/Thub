@@ -1,21 +1,21 @@
 package com.jm.thub.xcx.mapper;
 
+import com.jm.thub.xcx.entity.ThWxUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jm.thub.xcx.entity.WxUserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 
 /**
 * <p>
-*  Mapper 接口
+* 微信小程序-用户表 Mapper 接口
 * </p>
 *
 * @author caozhenhao
-* @since 2023-05-28
+* @since 2023-05-29
 */
 @Mapper
 @Repository
-public interface ThUserMapper extends BaseMapper<WxUserInfo> {
+public interface ThWxUserMapper extends BaseMapper<ThWxUser> {
 
 }

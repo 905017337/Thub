@@ -1,7 +1,7 @@
 package com.jm.thub.xcx.mapper;
 
-import com.jm.thub.xcx.entity.ThUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jm.thub.xcx.entity.WxUserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +16,6 @@ import org.springframework.stereotype.Repository;
 */
 @Mapper
 @Repository
-public interface ThUserMapper extends BaseMapper<ThUser> {
+public interface ThUserMapper extends BaseMapper<WxUserInfo> {
 
 }

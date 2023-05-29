@@ -1,12 +1,13 @@
 package com.jm.thub.xcx.controller;
 
-import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.jm.thub.xcx.service.IThUserService;
-import com.jm.thub.xcx.entity.ThUser;
-import org.springframework.web.bind.annotation.RestController;
-import javax.annotation.Resource;
 import com.jm.thub.core.controller.AbstractController;
+import com.jm.thub.core.util.result.Result;
+import com.jm.thub.xcx.entity.WxUserInfo;
+import com.jm.thub.xcx.service.IThUserService;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -19,10 +20,30 @@ import com.jm.thub.core.controller.AbstractController;
  */
 @RestController
 @RequestMapping("//api/v1/th-user")
-public class ThUserController extends AbstractController<ThUser, IThUserService> {
+public class ThUserController extends AbstractController<WxUserInfo, IThUserService> {
 
     @Resource
     private IThUserService iThUserService;
 
+
+    /**
+     * 登陆接口
+     */
+    @ApiOperation(value = "微信登录", httpMethod = "GET", notes = "微信小程序登录方法")
+    @GetMapping("/login")
+    public Result login(@RequestParam("code") String code) {
+        return iThUserService.login(code);
+    }
+
+    /**
+     * <pre>
+     * 获取用户信息接口
+     * </pre>
+     */
+    @ApiOperation(value = "获取个人基本信息", httpMethod = "GET", notes = "微信小程序获取个人基本信息")
+    @PostMapping("/getUserInfo")
+    public Result getUserInfo(@RequestBody WxUserInfo userInfo) {
+        return iThUserService.getUserInfo(userInfo);
+    }
 
 }
